@@ -1,0 +1,82 @@
+
+            "elexir": {
+                "name": "Detection",
+                "description": "Increase your Stealth Detection by 20 meters for N seconds.",
+                "image": "potion-health",
+                "elexirType": "potion",
+                "battleType": "PVP",
+                "potionType": [
+                    {
+                        "name": "Sip of Detection",
+                        "solvent": "Natural Water",
+                        "level": 3,
+                        "isChampion": false,
+                        "duration": 3.9,
+                        "tripleDuration": 5.9
+                    },
+                    {
+                        "name": "Tincture of Detection",
+                        "solvent": "Clear Water",
+                        "level": 10,
+                        "isChampion": false,
+                        "duration": 5.1,
+                        "tripleDuration": 7.0
+                    },
+                    {
+                        "name": "Dram of Detection",
+                        "solvent": "Pristine Water",
+                        "level": 20,
+                        "isChampion": false,
+                        "duration": 6.8,
+                        "tripleDuration": 8.7
+                    },
+                    {
+                        "name": "Potion of Detection",
+                        "solvent": "Cleansed Water",
+                        "level": 30,
+                        "isChampion": false,
+                        "duration": 8.4,
+                        "tripleDuration": 10.4
+                    },
+                    {
+                        "name": "Solution of Detection",
+                        "solvent": "Filtered Water",
+                        "level": 40,
+                        "isChampion": false,
+                        "duration": 10.1,
+                        "tripleDuration": 12.1
+                    },
+                    {
+                        "name": "Elixir of Detection",
+                        "solvent": "Purified Water",
+                        "level": 10,
+                        "isChampion": true,
+                        "duration": 12.1,
+                        "tripleDuration": 14.4
+                    },
+                    {
+                        "name": "Panacea of Detection",
+                        "solvent": "Cloud Mist",
+                        "level": 50,
+                        "isChampion": true,
+                        "duration": 13.1,
+                        "tripleDuration": 15.1
+                    },
+                    {
+                        "name": "Distillate of Detection",
+                        "solvent": "Star Dew",
+                        "level": 100,
+                        "isChampion": true,
+                        "duration": 14.5,
+                        "tripleDuration": 16.3
+                    },
+                    {
+                        "name": "Essence of Detection",
+                        "solvent": "Lorkhan's Tears",
+                        "level": 150,
+                        "isChampion": true,
+                        "duration": 15.7,
+                        "tripleDuration": 16.3
+                    },
+                ]
+            },

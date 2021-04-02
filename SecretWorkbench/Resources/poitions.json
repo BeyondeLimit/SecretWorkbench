@@ -1,0 +1,334 @@
+{
+    "potion": [
+        {
+            "name": "Ravage Spell Protection",
+            "description": "Applies Minor Breach to you, reducing your Spell Resistance by % for ^ seconds.",
+            "image": "lower-spell-resist",
+            "elexirType": "potion",
+            "battleType": "PVP",
+            "potionType": [
+                {
+                    "name": "Sip of Ravage Spell Protection",
+                    "solvent": "Natural Water",
+                    "level": 3,
+                    "isChampion": false,
+                    "duration": 13.6,
+                    "tripleDuration": 18.8,
+                    "amount": 1320
+                },
+                {
+                    "name": "Tincture of Ravage Spell Protection",
+                    "solvent": "Clear Water",
+                    "level": 10,
+                    "isChampion": false,
+                    "duration": 17.0,
+                    "tripleDuration": 22.2,
+                    "amount": 1320
+                },
+                {
+                    "name": "Dram of Ravage Spell Protection",
+                    "solvent": "Pristine Water",
+                    "level": 20,
+                    "isChampion": false,
+                    "duration": 21.9,
+                    "tripleDuration": 27.1,
+                    "amount": 1320
+                },
+                {
+                    "name": "Potion of Ravage Spell Protection",
+                    "solvent": "Cleansed Water",
+                    "level": 30,
+                    "isChampion": false,
+                    "duration": 26.7,
+                    "tripleDuration": 31.9,
+                    "amount": 1320
+                },
+                {
+                    "name": "Solution of Ravage Spell Protection",
+                    "solvent": "Filtered Water",
+                    "level": 40,
+                    "isChampion": false,
+                    "duration": 31.6,
+                    "tripleDuration": 36.8,
+                    "amount": 1320
+                },
+                {
+                    "name": "Elixir of Ravage Spell Protection",
+                    "solvent": "Purified Water",
+                    "level": 10,
+                    "isChampion": true,
+                    "duration": 37.4,
+                    "tripleDuration": 42.6,
+                    "amount": 1320
+                },
+                {
+                    "name": "Panacea of Ravage Spell Protection",
+                    "solvent": "Cloud Mist",
+                    "level": 50,
+                    "isChampion": true,
+                    "duration": 40.3,
+                    "tripleDuration": 45.5,
+                    "amount": 1320
+                },
+                {
+                    "name": "Distillate of Ravage Spell Protection",
+                    "solvent": "Star Dew",
+                    "level": 100,
+                    "isChampion": true,
+                    "duration": 44.2,
+                    "tripleDuration": 49.4,
+                    "amount": 1320
+                },
+                {
+                    "name": "Essence of Ravage Spell Protection",
+                    "solvent": "Lorkhan's Tears",
+                    "level": 150,
+                    "isChampion": true,
+                    "duration": 47.6,
+                    "tripleDuration": 52.8,
+                    "amount": 1320
+                }
+            ],
+            "twoReagents": [
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Lady's Smock",
+                    "combinedWith": "Butterfly Wing",
+                    "effect": "Vitality"
+                },
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Lady's Smock",
+                    "combinedWith": "Columbine",
+                    "effect": "Restore Magicka"
+                },
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Lady's Smock",
+                    "combinedWith": "Dragon Rheum",
+                    "effect": "Restore Magicka"
+                },
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Lady's Smock",
+                    "combinedWith": "Dragon's Bile",
+                    "effect": "Vitality"
+                },
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Lady's Smock",
+                    "combinedWith": "Fleshfly Larva",
+                    "effect": "Vitality"
+                },
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Lady's Smock",
+                    "combinedWith": "Imp Stool",
+                    "effect": "Increase Armor"
+                },
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Lady's Smock",
+                    "combinedWith": "Mountain Flower",
+                    "effect": "Increase Armor"
+                },
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Lady's Smock",
+                    "combinedWith": "Namira's Rot",
+                    "effect": "Spell Critical"
+                },
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Lady's Smock",
+                    "combinedWith": "Nightshade",
+                    "effect": "Protection"
+                },
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Lady's Smock",
+                    "combinedWith": "Torchbug Thorax",
+                    "effect": "Vitality"
+                },
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Lady's Smock",
+                    "combinedWith": "Water Hyacinth",
+                    "effect": "Spell Critical"
+                },
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Violet Coprinus",
+                    "combinedWith": "Blessed Thistle",
+                    "effect": "Ravage Health"
+                },
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Blue Entoloma",
+                    "combinedWith": "Columbine",
+                    "effect": "Ravage Magicka"
+                },
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Violet Coprinus",
+                    "combinedWith": "Butterfly Wing",
+                    "effect": "Vitality"
+                },
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Violet Coprinus",
+                    "combinedWith": "Dragon's Bile",
+                    "effect": "Vitality"
+                },
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Violet Coprinus",
+                    "combinedWith": "Fleshfly Larva",
+                    "effect": "Vitality"
+                },
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Violet Coprinus",
+                    "combinedWith": "Imp Stool",
+                    "effect": "Increase Armor"
+                },
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Violet Coprinus",
+                    "combinedWith": "Mountain Flower",
+                    "effect": "Increase Armor"
+                },
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Violet Coprinus",
+                    "combinedWith": "Nirnroot",
+                    "effect": "Ravage Health"
+                },
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Violet Coprinus",
+                    "combinedWith": "Scrib Jelly",
+                    "effect": "Ravage Magicka"
+                },
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Violet Coprinus",
+                    "combinedWith": "Stinkhorn",
+                    "effect": "Ravage Health"
+                },
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Violet Coprinus",
+                    "combinedWith": "Torchbug Thorax",
+                    "effect": "Vitality"
+                },
+                {
+                    "firstMainIngredient": "Lady's Smock",
+                    "secondMainIngredient": "Violet Coprinus",
+                    "combinedWith": "-",
+                    "effect": "Increase Spell Power"
+                }
+            ],
+            "threeReagents": [
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Lady's Smock",
+                    "combinedWith": "Corn Flower",
+                    "firstEffect": "Increase Spell Power",
+                    "secondEffect": "Restore Magicka"
+                },
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Lady's Smock",
+                    "combinedWith": "Powdered Mother of Pearl",
+                    "firstEffect": "Protection",
+                    "secondEffect": "Vitality"
+                },
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Violet Coprinus",
+                    "combinedWith": "Corn Flower",
+                    "firstEffect": "Ravage Health",
+                    "secondEffect": "Increase Spell Power"
+                },
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Violet Coprinus",
+                    "combinedWith": "Emetic Russula",
+                    "firstEffect": "Ravage Health",
+                    "secondEffect": "Ravage Magicka"
+                },
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Violet Coprinus",
+                    "combinedWith": "Nightshade",
+                    "firstEffect": "Protection",
+                    "secondEffect": "Ravage Health"
+                },
+                {
+                    "firstMainIngredient": "Beetle Scuttle",
+                    "secondMainIngredient": "Violet Coprinus",
+                    "combinedWith": "Powdered Mother of Pearl",
+                    "firstEffect": "Protection",
+                    "secondEffect": "Vitality"
+                },
+                {
+                    "firstMainIngredient": "Lady's Smock",
+                    "secondMainIngredient": "Violet Coprinus",
+                    "combinedWith": "Blessed Thistle",
+                    "firstEffect": "Increase Spell Power",
+                    "secondEffect": "Ravage Health"
+                },
+                {
+                    "firstMainIngredient": "Lady's Smock",
+                    "secondMainIngredient": "Violet Coprinus",
+                    "combinedWith": "Corn Flower",
+                    "firstEffect": "Increase Spell Power",
+                    "secondEffect": "Ravage Health"
+                },
+                {
+                    "firstMainIngredient": "Lady's Smock",
+                    "secondMainIngredient": "Violet Coprinus",
+                    "combinedWith": "Emetic Russula",
+                    "firstEffect": "Increase Spell Power",
+                    "secondEffect": "Ravage Health"
+                },
+                {
+                    "firstMainIngredient": "Lady's Smock",
+                    "secondMainIngredient": "Violet Coprinus",
+                    "combinedWith": "Namira's Rot",
+                    "firstEffect": "Increase Spell Power",
+                    "secondEffect": "Spell Critical"
+                },
+                {
+                    "firstMainIngredient": "Lady's Smock",
+                    "secondMainIngredient": "Violet Coprinus",
+                    "combinedWith": "Nightshade",
+                    "firstEffect": "Increase Spell Power",
+                    "secondEffect": "Ravage Health"
+                },
+                {
+                    "firstMainIngredient": "Lady's Smock",
+                    "secondMainIngredient": "Violet Coprinus",
+                    "combinedWith": "Nirnroot",
+                    "firstEffect": "Increase Spell Power",
+                    "secondEffect": "Ravage Health"
+                },
+                {
+                    "firstMainIngredient": "Lady's Smock",
+                    "secondMainIngredient": "Violet Coprinus",
+                    "combinedWith": "Stinkhorn",
+                    "firstEffect": "Increase Spell Power",
+                    "secondEffect": "Ravage Health"
+                },
+                {
+                    "firstMainIngredient": "Lady's Smock",
+                    "secondMainIngredient": "Violet Coprinus",
+                    "combinedWith": "Water Hyacinth",
+                    "firstEffect": "Increase Spell Power",
+                    "secondEffect": "Spell Critical"
+                }
+            ]
+        }
+    ]
+}
