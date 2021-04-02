@@ -37,13 +37,15 @@ struct PotionType: Codable, Identifiable {
 }
 
 // MARK: - TwoReagent
-struct TwoReagent: Codable {
+struct TwoReagent: Codable, Identifiable {
+    let id = UUID()
     let firstMainIngredient, secondMainIngredient, combinedWith: Reagent
     let effect: Effects
 }
 
 // MARK: - ThreeReagent
-struct ThreeReagent: Codable {
+struct ThreeReagent: Codable, Identifiable {
+    let id = UUID()
     let firstMainIngredient, secondMainIngredient, combinedWith: Reagent
     let firstEffect, secondEffect: Effects
 }
