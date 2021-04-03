@@ -14,6 +14,7 @@
 		88AB290A261373DF00858D49 /* Poition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AB2909261373DF00858D49 /* Poition.swift */; };
 		88AB290F2613797400858D49 /* Reagents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AB290E2613797400858D49 /* Reagents.swift */; };
 		88AB2914261384D900858D49 /* Effects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AB2913261384D900858D49 /* Effects.swift */; };
+		88C72966261897A50023AB0D /* PotionSectionItemVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C72965261897A50023AB0D /* PotionSectionItemVM.swift */; };
 		88DF34AB26172BBF005DC830 /* PotionsListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DF34AA26172BBF005DC830 /* PotionsListVM.swift */; };
 		88DF34B626172BE6005DC830 /* PotionDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DF34B526172BE6005DC830 /* PotionDetailsVM.swift */; };
 		88EB29A92606524C002397E8 /* SecretWorkbenchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB29A82606524C002397E8 /* SecretWorkbenchApp.swift */; };
@@ -53,6 +54,7 @@
 		88AB2909261373DF00858D49 /* Poition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poition.swift; sourceTree = "<group>"; };
 		88AB290E2613797400858D49 /* Reagents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reagents.swift; sourceTree = "<group>"; };
 		88AB2913261384D900858D49 /* Effects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effects.swift; sourceTree = "<group>"; };
+		88C72965261897A50023AB0D /* PotionSectionItemVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotionSectionItemVM.swift; sourceTree = "<group>"; };
 		88DF34AA26172BBF005DC830 /* PotionsListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotionsListVM.swift; sourceTree = "<group>"; };
 		88DF34B526172BE6005DC830 /* PotionDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotionDetailsVM.swift; sourceTree = "<group>"; };
 		88EB29A52606524B002397E8 /* SecretWorkbench.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretWorkbench.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +117,7 @@
 				88DF34B526172BE6005DC830 /* PotionDetailsVM.swift */,
 				88EB29AA2606524C002397E8 /* PotionsList.swift */,
 				88DF34AA26172BBF005DC830 /* PotionsListVM.swift */,
+				88C72965261897A50023AB0D /* PotionSectionItemVM.swift */,
 			);
 			path = Scense;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				88AB2914261384D900858D49 /* Effects.swift in Sources */,
 				88DF34B626172BE6005DC830 /* PotionDetailsVM.swift in Sources */,
 				88DF34AB26172BBF005DC830 /* PotionsListVM.swift in Sources */,
+				88C72966261897A50023AB0D /* PotionSectionItemVM.swift in Sources */,
 				8847AE3826172CFE003BD6FA /* Colors.swift in Sources */,
 				8864378126138A7D009C378E /* PotionDetails.swift in Sources */,
 				88EB29EF260802F4002397E8 /* ViewExt.swift in Sources */,

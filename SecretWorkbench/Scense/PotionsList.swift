@@ -28,7 +28,7 @@ struct PotionsList: View {
             SearchBar(text: $searchText)
             
             ForEach(vm.potions.filter({self.searchText.isEmpty ? true : $0.name.lowercased().localizedStandardContains(self.searchText.lowercased()) })) { potion in
-                PoitionSectionItem(potion: potion)
+                PotionSectionItem(potion: potion)
                     .padding()
             }
         }
@@ -37,19 +37,28 @@ struct PotionsList: View {
     }
 }
 
-struct PoitionSectionItem: View {
+struct PotionSectionItem: View {
     
-    var potion: Potion
+    private var vm: PotionSectionItem.ViewModel
+    
+    init(potion: Potion) {
+        self.vm = PotionSectionItem.ViewModel(potion: potion)
+    }
     
     var body: some View {
-        NavigationLink(destination: PotionDetails(vm: PotionDetails.ViewModel(potion: self.potion))) {
-            LazyVStack {
-                GroupBox(label: header) {
-                    Text(potion.potionDescription)
-                        .foregroundColor(.white)
+        NavigationLink(destination: PotionDetails(vm: PotionDetails.ViewModel(potion: self.vm.potion))) {
+            ZStack {
+                SecretColor.cellGreayed
+                    .cornerRadius(30)
+                    .shadow(radius: 30)
+                
+                LazyVStack {
+                    header
+                    Text(self.vm.potionDescription())
+                        .padding()
+                        .foregroundColor(SecretColor.basic)
                 }
             }
-            .shadow(radius: 15)
         }
     }
     
@@ -57,28 +66,24 @@ struct PoitionSectionItem: View {
         ZStack {
             Rectangle()
                 .cornerRadius(25.0, corners: .allCorners)
-                .foregroundColor(.gray)
+                .foregroundColor(SecretColor.basic)
             HStack(alignment: .center) {
-                Image("\(potion.image)")
-                    .overlay(RoundedRectangle(cornerRadius: 50, style: .continuous)
-                                .stroke(Color.black, lineWidth: 0.5))
+                Image("\(self.vm.potion.image)")
                     .padding()
                     .layoutPriority(2)
                 Spacer()
-                Text(potion.name)
-                    .foregroundColor(.white)
+                Text(self.vm.potion.name)
+                    .foregroundColor(SecretColor.grayedOut)
                     .layoutPriority(3)
                 Spacer()
-                Text(potion.battleType.rawValue)
-                    .foregroundColor(.white)
+                Text(self.vm.potion.battleType.rawValue)
+                    .foregroundColor(SecretColor.grayedOut)
                     .padding()
                     .layoutPriority(2)
             }
         }
     }
 }
-
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
