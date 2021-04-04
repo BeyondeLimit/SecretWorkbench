@@ -6,6 +6,7 @@
             "image": "lower-spell-resist",
             "elexirType": "potion",
             "battleType": "PVP",
+            "mainEffect": "Breach",
             "potionType": [
                 {
                     "name": "Sip of Ravage Spell Protection",

@@ -23,17 +23,23 @@ struct PotionDetails: View {
     
     var body: some View {
         ScrollView {
-            Image(self.vm.potion.image)
+            HStack {
+            Image(self.vm.potion.mainEffect.rawValue)
                 .padding()
                 .background(Circle())
                 .foregroundColor(SecretColor.basic)
+                
+                Text(self.vm.potion.mainEffect.rawValue)
+                    .padding()
+                    .font(.title)
+                    .foregroundColor(SecretColor.title)
+            }
             
             levels
             
             Text(self.vm.potionDescription(level: Int(level), isChampion: isChampion))
                 .padding()
                 .foregroundColor(SecretColor.basic)
-            
             
             reagentsList
         }
@@ -62,7 +68,7 @@ struct PotionDetails: View {
     }
     
     private var reagentsList: some View {
-        VStack(alignment: .center, spacing: 0) {
+        VStack(alignment: .center, spacing: 5) {
             HStack {
                 Spacer()
                 Text("Main reagents")
@@ -104,6 +110,7 @@ struct ReagentsList: View {
     
     let reagents: TwoReagent
     @State var isDetailsEnabled: Bool = false
+    @State var isDetailsExpanded: Bool = false
     
     var body: some View {
         VStack(spacing: 0) {
@@ -133,10 +140,13 @@ struct ReagentsList: View {
                         .font(.caption)
                         .fontWeight(.heavy)
                 }.frame(maxWidth: .infinity)
+                
+                
             }.padding()
             
             ZStack {
                 self.reagents.effect.isPositive ? SecretColor.positiveEffect : SecretColor.negativeEffect
+                
                 LazyHStack(alignment: .center) {
                     Image(self.reagents.effect.rawValue)
                         .padding(.bottom, 5)
@@ -144,10 +154,17 @@ struct ReagentsList: View {
                         .foregroundColor(SecretColor.basic)
                 }
             }
-            .frame(maxHeight: isDetailsEnabled ? 25 : 0)
+            .frame(maxHeight: isDetailsExpanded ? 25 : 0)
+            .scaleEffect(isDetailsEnabled ? 1 : 0, anchor: .top)
         }
         .onTapGesture {
-            self.isDetailsEnabled.toggle()
+            var transaction = Transaction(animation: .easeOut)
+            transaction.disablesAnimations = true
+            
+            withTransaction(transaction) {
+                self.isDetailsEnabled.toggle()
+            }
+            self.isDetailsExpanded.toggle()
         }
     }
 }

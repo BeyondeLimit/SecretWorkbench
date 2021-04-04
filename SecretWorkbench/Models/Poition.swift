@@ -16,6 +16,7 @@ struct Potion: Identifiable, Codable {
     var id = UUID()
     let name, potionDescription, image, elexirType: String
     let battleType: BattleType
+    let mainEffect: Effects
     let potionType: [PotionType]
     let twoReagents: [TwoReagent]
     let threeReagents: [ThreeReagent]
@@ -23,7 +24,7 @@ struct Potion: Identifiable, Codable {
     enum CodingKeys: String, CodingKey {
         case name
         case potionDescription = "description"
-        case image, elexirType, battleType, potionType, twoReagents, threeReagents
+        case image, elexirType, battleType, potionType, twoReagents, threeReagents, mainEffect
     }
 }
 
