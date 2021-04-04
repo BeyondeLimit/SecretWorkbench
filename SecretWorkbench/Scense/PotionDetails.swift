@@ -62,7 +62,7 @@ struct PotionDetails: View {
     }
     
     private var reagentsList: some View {
-        VStack(alignment: .center, spacing: 5) {
+        VStack(alignment: .center, spacing: 0) {
             HStack {
                 Spacer()
                 Text("Main reagents")
@@ -72,42 +72,14 @@ struct PotionDetails: View {
                     .padding()
             }
             ForEach(self.vm.potion.twoReagents) { reagents in
-                combination(of: reagents)
+                ReagentsList(reagents: reagents)
                 Divider()
                     .background(SecretColor.basic)
             }
         }
     }
     
-    private func combination(of reagents: TwoReagent) -> some View {
-        HStack(spacing: 10) {
-            VStack {
-                Image(reagents.firstMainIngredient.rawValue)
-                Text(reagents.firstMainIngredient.rawValue)
-                    .font(.caption)
-                    .fontWeight(.heavy)
-            }.frame(maxWidth: .infinity)
-            
-            VStack {
-                Image(reagents.secondMainIngredient.rawValue)
-                Text(reagents.secondMainIngredient.rawValue)
-                    .font(.caption)
-                    .fontWeight(.heavy)
-            }.frame(maxWidth: .infinity)
-            
-            HStack {
-                Divider()
-                    .background(SecretColor.basic)
-            }
-            
-            VStack {
-                Image(reagents.combinedWith.rawValue)
-                Text(reagents.combinedWith.rawValue)
-                    .font(.caption)
-                    .fontWeight(.heavy)
-            }.frame(maxWidth: .infinity)
-        }.padding()
-    }
+    
 }
 
 struct PotionDetails_Previews: PreviewProvider {
@@ -124,5 +96,58 @@ struct TransparentGroupBox: GroupBoxStyle {
             .padding()
             .background(RoundedRectangle(cornerRadius: 50).fill(SecretColor.basic))
             .overlay(configuration.label.padding(.leading, 4), alignment: .topLeading)
+    }
+}
+
+
+struct ReagentsList: View {
+    
+    let reagents: TwoReagent
+    @State var isDetailsEnabled: Bool = false
+    
+    var body: some View {
+        VStack(spacing: 0) {
+            HStack(spacing: 10) {
+                VStack {
+                    Image(reagents.firstMainIngredient.rawValue)
+                    Text(reagents.firstMainIngredient.rawValue)
+                        .font(.caption)
+                        .fontWeight(.heavy)
+                }.frame(maxWidth: .infinity)
+                
+                VStack {
+                    Image(reagents.secondMainIngredient.rawValue)
+                    Text(reagents.secondMainIngredient.rawValue)
+                        .font(.caption)
+                        .fontWeight(.heavy)
+                }.frame(maxWidth: .infinity)
+                
+                HStack {
+                    Divider()
+                        .background(SecretColor.basic)
+                }.frame(maxHeight: .infinity)
+                
+                VStack {
+                    Image(reagents.combinedWith.rawValue)
+                    Text(reagents.combinedWith.rawValue)
+                        .font(.caption)
+                        .fontWeight(.heavy)
+                }.frame(maxWidth: .infinity)
+            }.padding()
+            
+            ZStack {
+                self.reagents.effect.isPositive ? SecretColor.positiveEffect : SecretColor.negativeEffect
+                LazyHStack(alignment: .center) {
+                    Image(self.reagents.effect.rawValue)
+                        .padding(.bottom, 5)
+                    Text(self.reagents.effect.rawValue)
+                        .foregroundColor(SecretColor.basic)
+                }
+            }
+            .frame(maxHeight: isDetailsEnabled ? 25 : 0)
+        }
+        .onTapGesture {
+            self.isDetailsEnabled.toggle()
+        }
     }
 }

@@ -18,3 +18,12 @@ enum Effects: String, Codable {
     case increaseArmor = "Increase Armor"
     case spellCritical = "Spell Critical"
 }
+
+extension Effects {
+    var isPositive: Bool {
+        switch self {
+        case .ravageHealth, .ravageMagicka: return false
+        default: return true
+        }
+    }
+}
