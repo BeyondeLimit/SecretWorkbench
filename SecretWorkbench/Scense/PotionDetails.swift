@@ -104,6 +104,7 @@ struct PotionDetails: View {
                                 .frame(width: type.isChampion ? 50 : 0)
                                 .hidden(type.isChampion)
                             Text("\(type.level)")
+                                .font(.title2)
                         })
                         .foregroundColor(SecretColor.grayedOut)
                     }
