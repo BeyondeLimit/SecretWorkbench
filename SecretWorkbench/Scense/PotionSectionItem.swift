@@ -32,7 +32,7 @@ struct PotionSectionItem: View {
         }
     }
     
-    var header: some View {
+    private var header: some View {
         ZStack {
             Rectangle()
                 .cornerRadius(25.0, corners: .allCorners)

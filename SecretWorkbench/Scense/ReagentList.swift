@@ -53,7 +53,7 @@ struct ReagentsList: View {
     }
     
     @ViewBuilder
-    var effect: some View {
+    private var effect: some View {
         if self.isDetailsExpanded {
             ZStack {
                 (self.reagents.effect.isPositive ? SecretColor.positiveEffect : SecretColor.negativeEffect)

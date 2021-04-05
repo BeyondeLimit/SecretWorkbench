@@ -24,7 +24,6 @@ struct PotionDetails: View {
     
     var body: some View {
         ScrollView {
-            
             header
             
             levels
@@ -72,6 +71,7 @@ struct PotionDetails: View {
             SecretColor.basic
                 .cornerRadius(50)
                 .padding()
+            
             VStack {
                 HStack {
                     Text("Level: ")
@@ -81,7 +81,7 @@ struct PotionDetails: View {
                     
                     Image("Champion")
                         .frame(width: self.isChampion ? 50 : 0)
-                        .hidden(!self.isChampion)
+                        .hidden(self.isChampion)
                     
                     Text("\(self.level)")
                         .font(.title2)
@@ -100,7 +100,7 @@ struct PotionDetails: View {
                         }, label: {
                             Image("Champion")
                                 .frame(width: type.isChampion ? 50 : 0)
-                                .hidden(!type.isChampion)
+                                .hidden(type.isChampion)
                             Text("\(type.level)")
                         })
                         .foregroundColor(SecretColor.grayedOut)
@@ -141,14 +141,5 @@ struct PotionDetails: View {
 struct PotionDetails_Previews: PreviewProvider {
     static var previews: some View {
         PotionDetails(vm: PotionDetails.ViewModel(potion: Bundle(for: PotionsList.ViewModel.self).decode(MainResponse.self, from: "poitions").potion[0]))
-    }
-}
-
-extension View {
-    @ViewBuilder func hidden(_ shouldHide: Bool) -> some View {
-        switch shouldHide {
-        case true: self.hidden()
-        case false: self
-        }
     }
 }
