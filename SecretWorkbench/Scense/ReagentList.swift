@@ -43,27 +43,30 @@ struct ReagentsList: View {
                 }.frame(maxWidth: .infinity)
             }.padding()
             
+            effect
+        }
+        .onTapGesture {
+            withAnimation() {
+                self.isDetailsExpanded.toggle()
+            }
+        }
+    }
+    
+    @ViewBuilder
+    var effect: some View {
+        if self.isDetailsExpanded {
             ZStack {
-                self.reagents.effect.isPositive ? SecretColor.positiveEffect : SecretColor.negativeEffect
+                (self.reagents.effect.isPositive ? SecretColor.positiveEffect : SecretColor.negativeEffect)
                 
                 LazyHStack(alignment: .center) {
                     Image(self.reagents.effect.rawValue)
-                        .padding(.bottom, 5)
                     Text(self.reagents.effect.rawValue)
                         .foregroundColor(SecretColor.basic)
                 }
             }
-            .frame(maxHeight: isDetailsExpanded ? 25 : 0)
-            .scaleEffect(isDetailsEnabled ? 1 : 0, anchor: .top)
-        }
-        .onTapGesture {
-            var transaction = Transaction(animation: .easeOut)
-            transaction.disablesAnimations = true
-            
-            withTransaction(transaction) {
-                self.isDetailsEnabled.toggle()
-            }
-            self.isDetailsExpanded.toggle()
+            .frame(height: 40)
+            .transition(AnyTransition.move(edge: .top)
+                            .combined(with: AnyTransition.opacity))
         }
     }
 }

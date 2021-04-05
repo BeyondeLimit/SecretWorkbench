@@ -53,23 +53,55 @@ struct PotionDetails: View {
         .foregroundColor(SecretColor.title)
     }
     
+    @ViewBuilder
     private var levels: some View {
-        GroupBox {
-            DisclosureGroup("Level: \(self.level)", isExpanded: self.$isLevelExpanded) {
-                ForEach(self.vm.potion.potionType) { type in
-                    Button("\(type.level)") {
-                        self.level = "\(type.level)"
-                        self.isChampion = type.isChampion
-                        self.isLevelExpanded.toggle()
+        ZStack {
+            SecretColor.basic
+                .cornerRadius(50)
+                .padding()
+            VStack {
+                HStack {
+                    Text("Level: ")
+                        .font(.title2)
+                        .foregroundColor(SecretColor.grayedOut)
+                        .padding(.leading, 50)
+                    
+                    Image("Champion")
+                        .frame(width: self.isChampion ? 50 : 0)
+                        .hidden(!self.isChampion)
+                    
+                    Text("\(self.level)")
+                        .font(.title2)
+                        .foregroundColor(SecretColor.grayedOut)
+                    Spacer()
+                }
+                
+                if self.isLevelExpanded {
+                    ForEach(self.vm.potion.potionType) { type in
+                        Button(action: {
+                            self.level = "\(type.level)"
+                            self.isChampion = type.isChampion
+                            self.isLevelExpanded.toggle()
+                        }, label: {
+                            Image("Champion")
+                                .frame(width: type.isChampion ? 50 : 0)
+                                .hidden(!type.isChampion)
+                            Text("\(type.level)")
+                        })
+                        .foregroundColor(SecretColor.grayedOut)
                     }
+                    
                 }
             }
-            .foregroundColor(SecretColor.grayedOut)
-            .accentColor(SecretColor.grayedOut)
-            .font(.title2)
         }
-        .groupBoxStyle(TransparentGroupBox())
-        .padding()
+        .onTapGesture {
+            var transaction = Transaction(animation: .easeOut)
+            transaction.disablesAnimations = true
+            
+            withTransaction(transaction) {
+                self.isLevelExpanded.toggle()
+            }
+        }
     }
     
     private var reagentsList: some View {
@@ -99,5 +131,11 @@ struct PotionDetails_Previews: PreviewProvider {
     }
 }
 
-
-
+extension View {
+    @ViewBuilder func hidden(_ shouldHide: Bool) -> some View {
+        switch shouldHide {
+        case true: self.hidden()
+        case false: self
+        }
+    }
+}
