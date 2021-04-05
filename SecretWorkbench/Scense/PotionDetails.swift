@@ -16,6 +16,7 @@ struct PotionDetails: View {
     @State private var level = ""
     @State private var isLevelExpanded = false
     @State private var isChampion = false
+    @State private var isHeaderExpanded = false
     
     init(vm: PotionDetails.ViewModel) {
         self.vm = vm
@@ -23,22 +24,8 @@ struct PotionDetails: View {
     
     var body: some View {
         ScrollView {
-            ZStack {
-                SecretColor.basic
-                    .cornerRadius(50)
-                    .frame(width: 190, height: 65, alignment: .center)
-                HStack {
-                    Image(self.vm.potion.mainEffect.rawValue)
-                        .padding()
-                        .background(Circle())
-                        .foregroundColor(SecretColor.title)
-                    
-                    Text(self.vm.potion.mainEffect.rawValue)
-                        .padding()
-                        .font(.title)
-                        .foregroundColor(SecretColor.grayedOut)
-                }
-            }
+            
+            header
             
             levels
             
@@ -51,6 +38,32 @@ struct PotionDetails: View {
         .background(Color.black)
         .navigationBarTitle(self.vm.potion.name, displayMode: .automatic)
         .foregroundColor(SecretColor.title)
+    }
+    
+    private var header: some View {
+        ZStack {
+            SecretColor.basic
+                .cornerRadius(50)
+                .frame(width: self.isHeaderExpanded ? 190 : 30, height: 65, alignment: .center)
+            
+            HStack {
+                Image(self.vm.potion.mainEffect.rawValue)
+                    .padding()
+                    .background(Circle())
+                    .foregroundColor(SecretColor.title)
+                    .onTapGesture {
+                        withAnimation() {
+                            self.isHeaderExpanded.toggle()
+                        }
+                    }
+                if self.isHeaderExpanded {
+                    Text(self.vm.potion.mainEffect.rawValue)
+                        .padding()
+                        .font(.title)
+                        .foregroundColor(SecretColor.grayedOut)
+                }
+            }
+        }
     }
     
     @ViewBuilder
@@ -81,7 +94,9 @@ struct PotionDetails: View {
                         Button(action: {
                             self.level = "\(type.level)"
                             self.isChampion = type.isChampion
-                            self.isLevelExpanded.toggle()
+                            withAnimation() {
+                                self.isLevelExpanded.toggle()
+                            }
                         }, label: {
                             Image("Champion")
                                 .frame(width: type.isChampion ? 50 : 0)
@@ -90,15 +105,13 @@ struct PotionDetails: View {
                         })
                         .foregroundColor(SecretColor.grayedOut)
                     }
-                    
+                    .transition(AnyTransition.move(edge: .top)
+                                    .combined(with: AnyTransition.opacity))
                 }
             }
         }
         .onTapGesture {
-            var transaction = Transaction(animation: .easeOut)
-            transaction.disablesAnimations = true
-            
-            withTransaction(transaction) {
+            withAnimation {
                 self.isLevelExpanded.toggle()
             }
         }
