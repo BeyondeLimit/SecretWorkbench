@@ -70,13 +70,15 @@ struct PotionDetails: View {
         ZStack {
             SecretColor.basic
                 .cornerRadius(50)
-                .padding()
+                .padding(.leading, 30)
+                .padding(.trailing, 30)
             
             VStack {
                 HStack {
                     Text("Level: ")
                         .font(.title2)
                         .foregroundColor(SecretColor.grayedOut)
+                        .padding()
                         .padding(.leading, 50)
                     
                     Image("Champion")
