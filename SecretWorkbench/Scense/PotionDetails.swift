@@ -23,16 +23,21 @@ struct PotionDetails: View {
     
     var body: some View {
         ScrollView {
-            HStack {
-            Image(self.vm.potion.mainEffect.rawValue)
-                .padding()
-                .background(Circle())
-                .foregroundColor(SecretColor.basic)
-                
-                Text(self.vm.potion.mainEffect.rawValue)
-                    .padding()
-                    .font(.title)
-                    .foregroundColor(SecretColor.title)
+            ZStack {
+                SecretColor.basic
+                    .cornerRadius(50)
+                    .frame(width: 190, height: 65, alignment: .center)
+                HStack {
+                    Image(self.vm.potion.mainEffect.rawValue)
+                        .padding()
+                        .background(Circle())
+                        .foregroundColor(SecretColor.title)
+                    
+                    Text(self.vm.potion.mainEffect.rawValue)
+                        .padding()
+                        .font(.title)
+                        .foregroundColor(SecretColor.grayedOut)
+                }
             }
             
             levels
