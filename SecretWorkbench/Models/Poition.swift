@@ -18,8 +18,8 @@ struct Potion: Identifiable, Codable {
     let battleType: BattleType
     let mainEffect: Effects
     let potionType: [PotionType]
-    let twoReagents: [TwoReagent]
-    let threeReagents: [ThreeReagent]
+    let twoReagents: [Reagents]
+    let threeReagents: [Reagents]
 
     enum CodingKeys: String, CodingKey {
         case name
@@ -37,18 +37,12 @@ struct PotionType: Codable, Identifiable {
     let duration, tripleDuration, amount: Double
 }
 
-// MARK: - TwoReagent
-struct TwoReagent: Codable, Identifiable {
-    let id = UUID()
-    let firstMainIngredient, secondMainIngredient, combinedWith: Reagent
-    let effect: Effects
-}
-
 // MARK: - ThreeReagent
-struct ThreeReagent: Codable, Identifiable {
+struct Reagents: Codable, Identifiable {
     let id = UUID()
     let firstMainIngredient, secondMainIngredient, combinedWith: Reagent
-    let firstEffect, secondEffect: Effects
+    let firstEffect: Effects
+    let secondEffect: Effects?
 }
 
 // MARK:: - BattleType

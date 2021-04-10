@@ -9,12 +9,12 @@ import SwiftUI
 
 struct ReagentsList: View {
     
-    let reagents: TwoReagent
-    @State var isDetailsEnabled: Bool = false
-    @State var isDetailsExpanded: Bool = false
+    let reagents: Reagents
+    @State private var isDetailsEnabled: Bool = false
+    @State private var isDetailsExpanded: Bool = false
     
     var body: some View {
-        VStack(spacing: 0) {
+        return VStack(spacing: 0) {
             HStack(spacing: 10) {
                 VStack {
                     Image(reagents.firstMainIngredient.rawValue)
@@ -55,17 +55,34 @@ struct ReagentsList: View {
     @ViewBuilder
     private var effect: some View {
         if self.isDetailsExpanded {
-            ZStack {
-                (self.reagents.effect.isPositive ? SecretColor.positiveEffect : SecretColor.negativeEffect)
-                LazyVStack {
-                    LazyHStack(alignment: .center) {
-                        Image(self.reagents.effect.rawValue)
-                        Text(self.reagents.effect.rawValue)
-                            .foregroundColor(SecretColor.basic)
+            VStack {
+                ZStack {
+                    (self.reagents.firstEffect.isPositive ? SecretColor.positiveEffect : SecretColor.negativeEffect)
+                    LazyVStack {
+                        LazyHStack(alignment: .center) {
+                            Image(self.reagents.firstEffect.rawValue)
+                            Text(self.reagents.firstEffect.rawValue)
+                                .foregroundColor(SecretColor.basic)
+                        }
+                        Text("Grants you Major Vitality, increasing your healing taken by 30% for 35 seconds.")
+                            .font(.title3)
+                            .foregroundColor(.black)
                     }
-                    Text("Grants you Major Vitality, increasing your healing taken by 30% for 35 seconds.")
-                        .font(.title3)
-                        .foregroundColor(.black)
+                }
+                if let effect = self.reagents.secondEffect {
+                    ZStack {
+                        (effect.isPositive ? SecretColor.positiveEffect : SecretColor.negativeEffect)
+                        LazyVStack {
+                            LazyHStack(alignment: .center) {
+                                Image(effect.rawValue)
+                                Text(effect.rawValue)
+                                    .foregroundColor(SecretColor.basic)
+                            }
+                            Text("Grants you Major Vitality, increasing your healing taken by 30% for 35 seconds.")
+                                .font(.title3)
+                                .foregroundColor(.black)
+                        }
+                    }
                 }
             }
             .frame(height: .infinity)

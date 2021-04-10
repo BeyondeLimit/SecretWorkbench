@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88350C642621E624007497B2 /* EffectToogleNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88350C632621E624007497B2 /* EffectToogleNames.swift */; };
 		8847AE3826172CFE003BD6FA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8847AE3726172CFE003BD6FA /* Colors.swift */; };
 		8864378126138A7D009C378E /* PotionDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8864378026138A7D009C378E /* PotionDetails.swift */; };
 		888349612610FD4000E58D74 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888349602610FD4000E58D74 /* SearchBar.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		88350C632621E624007497B2 /* EffectToogleNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectToogleNames.swift; sourceTree = "<group>"; };
 		8847AE3726172CFE003BD6FA /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8864378026138A7D009C378E /* PotionDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PotionDetails.swift; sourceTree = "<group>"; };
 		888349602610FD4000E58D74 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				88EB29AA2606524C002397E8 /* PotionsList.swift */,
 				88DF34AA26172BBF005DC830 /* PotionsListViewModel.swift */,
 				88D11F32261A31A6003306AF /* ReagentList.swift */,
+				88350C632621E624007497B2 /* EffectToogleNames.swift */,
 			);
 			path = Scense;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				88C72966261897A50023AB0D /* PotionSectionItemViewModel.swift in Sources */,
 				8847AE3826172CFE003BD6FA /* Colors.swift in Sources */,
 				8864378126138A7D009C378E /* PotionDetails.swift in Sources */,
+				88350C642621E624007497B2 /* EffectToogleNames.swift in Sources */,
 				88EB29EF260802F4002397E8 /* ViewExt.swift in Sources */,
 				88AB290F2613797400858D49 /* Reagents.swift in Sources */,
 				88D11F33261A31A6003306AF /* ReagentList.swift in Sources */,

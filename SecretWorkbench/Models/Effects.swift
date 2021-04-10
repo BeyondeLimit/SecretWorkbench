@@ -44,4 +44,17 @@ extension Effects {
         default: return true
         }
     }
+    
+    func getDescription(level: Int) -> String {
+        switch self {
+        case .increaseSpellPower:
+            <#code#>
+        default:
+            return "-"
+        }
+    }
+    
+    private func getSeconds() -> String {
+        
+    }
 }

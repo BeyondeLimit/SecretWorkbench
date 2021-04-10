@@ -95,139 +95,162 @@
                     "firstMainIngredient": "Beetle Scuttle",
                     "secondMainIngredient": "Lady's Smock",
                     "combinedWith": "Butterfly Wing",
-                    "effect": "Vitality"
+                    "firstEffect": "Vitality",
+                    "secondEffect": null
                 },
                 {
                     "firstMainIngredient": "Beetle Scuttle",
                     "secondMainIngredient": "Lady's Smock",
                     "combinedWith": "Columbine",
-                    "effect": "Restore Magicka"
+                    "firstEffect": "Restore Magicka",
+                    "secondEffect": null
                 },
                 {
                     "firstMainIngredient": "Beetle Scuttle",
                     "secondMainIngredient": "Lady's Smock",
                     "combinedWith": "Dragon Rheum",
-                    "effect": "Restore Magicka"
+                    "firstEffect": "Restore Magicka",
+                    "secondEffect": null
                 },
                 {
                     "firstMainIngredient": "Beetle Scuttle",
                     "secondMainIngredient": "Lady's Smock",
                     "combinedWith": "Dragon's Bile",
-                    "effect": "Vitality"
+                    "firstEffect": "Vitality",
+                    "secondEffect": null
                 },
                 {
                     "firstMainIngredient": "Beetle Scuttle",
                     "secondMainIngredient": "Lady's Smock",
                     "combinedWith": "Fleshfly Larva",
-                    "effect": "Vitality"
+                    "firstEffect": "Vitality",
+                    "secondEffect": null
                 },
                 {
                     "firstMainIngredient": "Beetle Scuttle",
                     "secondMainIngredient": "Lady's Smock",
                     "combinedWith": "Imp Stool",
-                    "effect": "Increase Armor"
+                    "firstEffect": "Increase Armor",
+                    "secondEffect": null
                 },
                 {
                     "firstMainIngredient": "Beetle Scuttle",
                     "secondMainIngredient": "Lady's Smock",
                     "combinedWith": "Mountain Flower",
-                    "effect": "Increase Armor"
+                    "firstEffect": "Increase Armor",
+                    "secondEffect": null
                 },
                 {
                     "firstMainIngredient": "Beetle Scuttle",
                     "secondMainIngredient": "Lady's Smock",
                     "combinedWith": "Namira's Rot",
-                    "effect": "Spell Critical"
+                    "firstEffect": "Spell Critical",
+                    "secondEffect": null
                 },
                 {
                     "firstMainIngredient": "Beetle Scuttle",
                     "secondMainIngredient": "Lady's Smock",
                     "combinedWith": "Nightshade",
-                    "effect": "Protection"
+                    "firstEffect": "Protection",
+                    "secondEffect": null
                 },
                 {
                     "firstMainIngredient": "Beetle Scuttle",
                     "secondMainIngredient": "Lady's Smock",
                     "combinedWith": "Torchbug Thorax",
-                    "effect": "Vitality"
+                    "firstEffect": "Vitality",
+                    "secondEffect": null
                 },
                 {
                     "firstMainIngredient": "Beetle Scuttle",
                     "secondMainIngredient": "Lady's Smock",
                     "combinedWith": "Water Hyacinth",
-                    "effect": "Spell Critical"
+                    "firstEffect": "Spell Critical",
+                    "secondEffect": null
                 },
                 {
                     "firstMainIngredient": "Beetle Scuttle",
                     "secondMainIngredient": "Violet Coprinus",
                     "combinedWith": "Blessed Thistle",
-                    "effect": "Ravage Health"
+                    "firstEffect": "Ravage Health",
+                    "secondEffect": null
                 },
                 {
                     "firstMainIngredient": "Beetle Scuttle",
                     "secondMainIngredient": "Blue Entoloma",
                     "combinedWith": "Columbine",
-                    "effect": "Ravage Magicka"
+                    "firstEffect": "Ravage Magicka",
+                    "secondEffect": null
                 },
                 {
                     "firstMainIngredient": "Beetle Scuttle",
                     "secondMainIngredient": "Violet Coprinus",
                     "combinedWith": "Butterfly Wing",
-                    "effect": "Vitality"
+                    "firstEffect": "Vitality",
+                    "secondEffect": null
                 },
                 {
                     "firstMainIngredient": "Beetle Scuttle",
                     "secondMainIngredient": "Violet Coprinus",
                     "combinedWith": "Dragon's Bile",
-                    "effect": "Vitality"
+                    "firstEffect": "Vitality",
+                    "secondEffect": null
                 },
                 {
                     "firstMainIngredient": "Beetle Scuttle",
                     "secondMainIngredient": "Violet Coprinus",
                     "combinedWith": "Fleshfly Larva",
-                    "effect": "Vitality"
+                    "firstEffect": "Vitality",
+                    "secondEffect": null
                 },
                 {
                     "firstMainIngredient": "Beetle Scuttle",
                     "secondMainIngredient": "Violet Coprinus",
                     "combinedWith": "Imp Stool",
-                    "effect": "Increase Armor"
+                    "firstEffect": "Increase Armor",
+                    "secondEffect": null
                 },
                 {
                     "firstMainIngredient": "Beetle Scuttle",
                     "secondMainIngredient": "Violet Coprinus",
                     "combinedWith": "Mountain Flower",
-                    "effect": "Increase Armor"
+                    "firstEffect": "Increase Armor",
+                    "secondEffect": null
                 },
                 {
                     "firstMainIngredient": "Beetle Scuttle",
                     "secondMainIngredient": "Violet Coprinus",
                     "combinedWith": "Nirnroot",
-                    "effect": "Ravage Health"
+                    "firstEffect": "Ravage Health",
+                    "secondEffect": null
                 },
                 {
                     "firstMainIngredient": "Beetle Scuttle",
                     "secondMainIngredient": "Violet Coprinus",
                     "combinedWith": "Scrib Jelly",
-                    "effect": "Ravage Magicka"
+                    "firstEffect": "Ravage Magicka",
+                    "secondEffect": null
                 },
                 {
                     "firstMainIngredient": "Beetle Scuttle",
                     "secondMainIngredient": "Violet Coprinus",
                     "combinedWith": "Stinkhorn",
-                    "effect": "Ravage Health"
+                    "firstEffect": "Ravage Health",
+                    "secondEffect": null
                 },
                 {
                     "firstMainIngredient": "Beetle Scuttle",
                     "secondMainIngredient": "Violet Coprinus",
                     "combinedWith": "Torchbug Thorax",
-                    "effect": "Vitality"
+                    "firstEffect": "Vitality",
+                    "secondEffect": null
                 },
                 {
                     "firstMainIngredient": "Lady's Smock",
                     "secondMainIngredient": "Violet Coprinus",
                     "combinedWith": "-",
-                    "effect": "Increase Spell Power"
+                    "firstEffect": "Increase Spell Power",
+                    "secondEffect": null
                 }
             ],
             "threeReagents": [

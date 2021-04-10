@@ -17,6 +17,7 @@ struct PotionDetails: View {
     @State private var isLevelExpanded = false
     @State private var isChampion = false
     @State private var isHeaderExpanded = false
+    @State private var isToggleOn = false
     
     init(vm: PotionDetails.ViewModel) {
         self.viewModel = vm
@@ -31,6 +32,8 @@ struct PotionDetails: View {
             Text(self.viewModel.potionDescription(level: Int(level), isChampion: isChampion))
                 .padding()
                 .foregroundColor(SecretColor.basic)
+            
+            effectsToggle
             
             reagentsList
         }
@@ -114,11 +117,27 @@ struct PotionDetails: View {
                 }
             }
         }
+        .frame(height: isLevelExpanded ? .infinity : 50)
+        .padding(.top)
         .onTapGesture {
             withAnimation {
                 self.isLevelExpanded.toggle()
             }
         }
+    }
+    
+    private var effectsToggle: some View {
+        Toggle(isOn: self.$isToggleOn) {
+            Text(self.isToggleOn ? EffectsToogleName.triple.rawValue : EffectsToogleName.two.rawValue)
+                .font(.title)
+                .foregroundColor(self.isToggleOn ? SecretColor.positiveEffect : SecretColor.grayedOut)
+                .padding(.leading, 30)
+                .padding(.top, 10)
+                .padding(.bottom, 10)
+        }
+        .background(SecretColor.basic)
+        .cornerRadius(50)
+        .padding(.all, 10)
     }
     
     private var reagentsList: some View {
@@ -131,7 +150,7 @@ struct PotionDetails: View {
                 Text("Combine with")
                     .padding()
             }
-            ForEach(self.viewModel.potion.twoReagents) { reagents in
+            ForEach(isToggleOn ? self.viewModel.potion.threeReagents : self.viewModel.potion.twoReagents) { reagents in
                 ReagentsList(reagents: reagents)
                 Divider()
                     .background(SecretColor.basic)
