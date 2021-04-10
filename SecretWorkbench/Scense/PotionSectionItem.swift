@@ -9,14 +9,14 @@ import SwiftUI
 
 struct PotionSectionItem: View {
     
-    private var vm: PotionSectionItem.ViewModel
+    private var viewModel: PotionSectionItem.ViewModel
     
     init(potion: Potion) {
-        self.vm = PotionSectionItem.ViewModel(potion: potion)
+        self.viewModel = PotionSectionItem.ViewModel(potion: potion)
     }
     
     var body: some View {
-        NavigationLink(destination: PotionDetails(vm: PotionDetails.ViewModel(potion: self.vm.potion))) {
+        NavigationLink(destination: PotionDetails(vm: PotionDetails.ViewModel(potion: self.viewModel.potion))) {
             ZStack {
                 SecretColor.cellGreayed
                     .cornerRadius(30)
@@ -24,7 +24,7 @@ struct PotionSectionItem: View {
                 
                 LazyVStack {
                     header
-                    Text(self.vm.potionDescription())
+                    Text(self.viewModel.potionDescription())
                         .padding()
                         .foregroundColor(SecretColor.basic)
                 }
@@ -38,15 +38,15 @@ struct PotionSectionItem: View {
                 .cornerRadius(25.0, corners: .allCorners)
                 .foregroundColor(SecretColor.basic)
             HStack(alignment: .center) {
-                Image("\(self.vm.potion.image)")
+                Image("\(self.viewModel.potion.image)")
                     .padding()
                     .layoutPriority(2)
                 Spacer()
-                Text(self.vm.potion.name)
+                Text(self.viewModel.potion.name)
                     .foregroundColor(SecretColor.grayedOut)
                     .layoutPriority(3)
                 Spacer()
-                Text(self.vm.potion.battleType.rawValue)
+                Text(self.viewModel.potion.battleType.rawValue)
                     .foregroundColor(SecretColor.grayedOut)
                     .padding()
                     .layoutPriority(2)

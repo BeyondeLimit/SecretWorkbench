@@ -57,14 +57,18 @@ struct ReagentsList: View {
         if self.isDetailsExpanded {
             ZStack {
                 (self.reagents.effect.isPositive ? SecretColor.positiveEffect : SecretColor.negativeEffect)
-                
-                LazyHStack(alignment: .center) {
-                    Image(self.reagents.effect.rawValue)
-                    Text(self.reagents.effect.rawValue)
-                        .foregroundColor(SecretColor.basic)
+                LazyVStack {
+                    LazyHStack(alignment: .center) {
+                        Image(self.reagents.effect.rawValue)
+                        Text(self.reagents.effect.rawValue)
+                            .foregroundColor(SecretColor.basic)
+                    }
+                    Text("Grants you Major Vitality, increasing your healing taken by 30% for 35 seconds.")
+                        .font(.title3)
+                        .foregroundColor(.black)
                 }
             }
-            .frame(height: 40)
+            .frame(height: .infinity)
             .transition(AnyTransition.move(edge: .top)
                             .combined(with: AnyTransition.opacity))
         }

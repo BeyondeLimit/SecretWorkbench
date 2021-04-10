@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PotionsList: View {
     
-    private let vm = PotionsList.ViewModel()
+    private let viewModel = PotionsList.ViewModel()
     @State private var searchText: String = ""
     
     init() {
@@ -27,7 +27,7 @@ struct PotionsList: View {
         ScrollView {
             SearchBar(text: $searchText)
             
-            ForEach(vm.potions.filter({self.searchText.isEmpty ? true : $0.name.lowercased().localizedStandardContains(self.searchText.lowercased()) })) { potion in
+            ForEach(viewModel.potions.filter({self.searchText.isEmpty ? true : $0.name.lowercased().localizedStandardContains(self.searchText.lowercased()) })) { potion in
                 PotionSectionItem(potion: potion)
                     .padding()
             }

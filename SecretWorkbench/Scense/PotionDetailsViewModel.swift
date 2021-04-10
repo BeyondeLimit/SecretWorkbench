@@ -1,5 +1,5 @@
 //
-//  PotionDetailsVM.swift
+//  PotionDetailsViewModel.swift
 //  SecretWorkbench
 //
 //  Created by Arseny Mamikonyan on 02/04/2021.

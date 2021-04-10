@@ -12,14 +12,14 @@ import Combine
 
 struct PotionDetails: View {
     
-    private let vm: PotionDetails.ViewModel
+    private let viewModel: PotionDetails.ViewModel
     @State private var level = ""
     @State private var isLevelExpanded = false
     @State private var isChampion = false
     @State private var isHeaderExpanded = false
     
     init(vm: PotionDetails.ViewModel) {
-        self.vm = vm
+        self.viewModel = vm
     }
     
     var body: some View {
@@ -28,15 +28,20 @@ struct PotionDetails: View {
             
             levels
             
-            Text(self.vm.potionDescription(level: Int(level), isChampion: isChampion))
+            Text(self.viewModel.potionDescription(level: Int(level), isChampion: isChampion))
                 .padding()
                 .foregroundColor(SecretColor.basic)
             
             reagentsList
         }
         .background(Color.black)
-        .navigationBarTitle(self.vm.potion.name, displayMode: .automatic)
+        .navigationBarTitle(self.viewModel.potion.name, displayMode: .automatic)
         .foregroundColor(SecretColor.title)
+        .onAppear() {
+            withAnimation(Animation.linear.delay(0.5) ) {
+                self.isHeaderExpanded.toggle()
+            }
+        }
     }
     
     private var header: some View {
@@ -46,17 +51,13 @@ struct PotionDetails: View {
                 .frame(width: self.isHeaderExpanded ? 190 : 30, height: 65, alignment: .center)
             
             HStack {
-                Image(self.vm.potion.mainEffect.rawValue)
+                Image(self.viewModel.potion.mainEffect.rawValue)
                     .padding()
                     .background(Circle())
                     .foregroundColor(SecretColor.title)
-                    .onTapGesture {
-                        withAnimation() {
-                            self.isHeaderExpanded.toggle()
-                        }
-                    }
+                
                 if self.isHeaderExpanded {
-                    Text(self.vm.potion.mainEffect.rawValue)
+                    Text(self.viewModel.potion.mainEffect.rawValue)
                         .padding()
                         .font(.title)
                         .foregroundColor(SecretColor.grayedOut)
@@ -92,7 +93,7 @@ struct PotionDetails: View {
                 }
                 
                 if self.isLevelExpanded {
-                    ForEach(self.vm.potion.potionType) { type in
+                    ForEach(self.viewModel.potion.potionType) { type in
                         Button(action: {
                             self.level = "\(type.level)"
                             self.isChampion = type.isChampion
@@ -130,7 +131,7 @@ struct PotionDetails: View {
                 Text("Combine with")
                     .padding()
             }
-            ForEach(self.vm.potion.twoReagents) { reagents in
+            ForEach(self.viewModel.potion.twoReagents) { reagents in
                 ReagentsList(reagents: reagents)
                 Divider()
                     .background(SecretColor.basic)
